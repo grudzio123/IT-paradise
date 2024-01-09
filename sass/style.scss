@@ -218,7 +218,6 @@ body {
 		&__btn {
 			padding: 0.9em 1.4em;
 			font-size: 1.4rem;
-
 		}
 	}
 	.white-block {
@@ -245,7 +244,7 @@ body {
 		}
 
 		&__btn {
-			font-size: 2rem;
+			font-size: 1.8rem;
 		}
 	}
 
@@ -266,18 +265,15 @@ body {
 		background-position: 0 80%;
 
 		&__heading {
-
 			font-size: 8rem;
 		}
 
 		&__text {
-
 			font-size: 3rem;
 		}
+		&__btn {
 
-
+			font-size: 2rem;
 		}
-
-		
 	}
-
+}
