@@ -1,0 +1,283 @@
+@import 'colors';
+@import 'components';
+@import 'mixins';
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.6rem;
+}
+
+// nav
+
+.burger-btn {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	padding: 1em;
+	border: 1px solid transparent;
+	background: none;
+	cursor: pointer;
+	z-index: 1000;
+
+	&:focus {
+		outline: none;
+		border: 2px solid $green-color;
+		border-radius: 5px;
+	}
+
+	&:hover {
+		.burger-btn__bars::after,
+		.burger-btn__bars::before {
+			width: 100%;
+		}
+	}
+
+	&__box {
+		position: relative;
+		width: 40px;
+		height: 30px;
+	}
+
+	&__bars,
+	&__bars::after,
+	&__bars::before {
+		@include burgerBtn;
+	}
+
+	&__bars {
+		width: 100%;
+
+		&::after {
+			top: 13px;
+			width: 60%;
+		}
+
+		&::before {
+			top: 27px;
+			width: 30%;
+			transition-delay: 0.2s;
+		}
+	}
+}
+
+// nav
+
+.nav {
+	&__hidden {
+		position: fixed;
+		top: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+		width: 100%;
+		background-image: $blue-gradient-solid;
+		z-index: 100;
+		transform: translateX(100%);
+		transition: 2s cubic-bezier(0.23, 1, 0.32, 1);
+	}
+
+	&--active {
+		transform: translateX(0);
+	}
+
+	&__item {
+		position: relative;
+		display: block;
+		margin-top: 1.5em;
+		color: $pure-white;
+		text-transform: uppercase;
+		text-decoration: none;
+		text-align: center;
+		font-size: 3.4rem;
+
+		&:before {
+			position: absolute;
+			top: 0;
+			left: -10%;
+			height: 100%;
+			width: 3px;
+			background-color: $green-color;
+			content: '';
+			transform: scaleY(0);
+			transform-origin: right;
+			transition: transform 0.3s;
+		}
+
+		&:hover::before {
+			transform: scaleY(1);
+			transform-origin: left;
+		}
+	}
+}
+
+@keyframes navItemsAnimation {
+	from {
+		transform: translateX(200%);
+	}
+
+	to {
+		transform: translateX(0);
+	}
+}
+
+.nav-items-animation {
+	animation: navItemsAnimation 1s linear both;
+}
+
+// header
+
+.header {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 2em;
+	height: 75vh;
+	text-align: center;
+	color: $pure-white;
+	@include heroImage('../img/header-small.jpg');
+	background-attachment: scroll;
+
+	&__heading {
+		font-size: 8rem;
+		padding-bottom: 0.4em 0 0.4em;
+		font-family: 'Roboto Condensed', sans-serif;
+		font-weight: 250;
+		text-transform: uppercase;
+	}
+
+	&__text {
+		font-size: 2.3rem;
+	}
+	&__btn {
+		margin-top: 2.9em;
+		padding: 0.6em 1.4em;
+		text-transform: uppercase;
+		text-decoration: none;
+		border-radius: 10px;
+		border: 3px solid $green-color;
+		background: none;
+		font-size: 2rem;
+		color: $pure-white;
+		cursor: pointer;
+
+		&:hover {
+			color: $dark;
+			font-weight: bold;
+		}
+
+		&::before {
+			background-color: $green-color;
+		}
+	}
+}
+
+// media
+
+@media (max-width: 576px) {
+	.nav {
+		&__item {
+			font-size: 2rem;
+		}
+		.burger-btn {
+			&__box {
+				width: 30px;
+				height: 20px;
+			}
+		}
+	}
+
+	.header {
+		&__heading {
+			margin-top: 1.2em;
+			font-size: 4rem;
+			letter-spacing: 1px;
+		}
+
+		&__text {
+			margin-top: 0.6em;
+			font-size: 2.2rem;
+		}
+
+		&__btn {
+			padding: 0.9em 1.4em;
+			font-size: 1.4rem;
+
+		}
+	}
+	.white-block {
+		height: 30px;
+		width: 55%;
+	}
+}
+
+@media (min-width: 576px) {
+	.nav {
+		&__item {
+			font-size: 4.2rem;
+		}
+	}
+	.header {
+		&__heading {
+			margin-top: 1em;
+			font-size: 5.2rem;
+		}
+
+		&__text {
+			margin-top: 0.6em;
+			font-size: 2.2rem;
+		}
+
+		&__btn {
+			font-size: 2rem;
+		}
+	}
+
+	.white-block {
+		height: 50px;
+		width: 60%;
+	}
+}
+
+@media (min-width: 992px) {
+	.burger-btn {
+		top: 50px;
+		right: 50px;
+	}
+
+	.header {
+		background-image: $dark-blue-gradient, url('../img/header-big.jpg');
+		background-position: 0 80%;
+
+		&__heading {
+
+			font-size: 8rem;
+		}
+
+		&__text {
+
+			font-size: 3rem;
+		}
+
+
+		}
+
+		
+	}
+
