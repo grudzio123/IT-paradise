@@ -52,3 +52,19 @@
 		}
 }
 
+.section-heading {
+
+	position: relative;
+	margin-bottom: 2.8em;
+	font-size: 3rem;
+	font-weight: 300;
+	color: $main-color;
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: 2px;
+}
+
+.section-padding {
+
+padding: 6em 2em; 
+}

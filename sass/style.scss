@@ -156,7 +156,6 @@ body {
 
 	&__heading {
 		font-size: 8rem;
-		padding-bottom: 0.4em 0 0.4em;
 		font-family: 'Roboto Condensed', sans-serif;
 		font-weight: 250;
 		text-transform: uppercase;
@@ -166,8 +165,8 @@ body {
 		font-size: 2.3rem;
 	}
 	&__btn {
-		margin-top: 2.9em;
-		padding: 0.6em 1.4em;
+		margin-top: 4.6em;
+		padding: 3.6em 1.4em;
 		text-transform: uppercase;
 		text-decoration: none;
 		border-radius: 10px;
@@ -188,9 +187,40 @@ body {
 	}
 }
 
+// MAIN 
+// ABOUTUS SECTION
+
+.aboutus {
+
+&__box {
+
+	display: flex;
+	flex-direction: column;
+	margin: 2em 0;
+}
+
+&__img {
+
+	width: 100%;
+	margin-bottom: 1em;
+}
+
+&__title {
+
+	margin-bottom: 0.5em;
+}
+
+&__text {
+
+	font-size: 1.4rem;
+}
+
+
+}
+
 // media
 
-@media (max-width: 576px) {
+@media (min-width: 300px) {
 	.nav {
 		&__item {
 			font-size: 2rem;
@@ -254,6 +284,16 @@ body {
 	}
 }
 
+@media (min-width: 768px) {
+	.section-heading {
+		font-size: 3.6rem;
+	}
+
+	.section-padding {
+		padding: 8em 2em;
+	}
+}
+
 @media (min-width: 992px) {
 	.burger-btn {
 		top: 50px;
@@ -272,8 +312,21 @@ body {
 			font-size: 3rem;
 		}
 		&__btn {
-
 			font-size: 2rem;
 		}
+	}
+
+	.white-block {
+		height: 30px;
+		width: 50%;
+	}
+
+	.section-heading {
+		font-size: 4.8rem;
+	}
+
+	.section-padding {
+
+		padding: 10em 2em;
 	}
 }
