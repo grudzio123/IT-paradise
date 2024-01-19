@@ -11,16 +11,16 @@ const showNav = () => {
 		})
 	})
 
-	PlayNavItemsAnimation();
+	PlayNavItemsAnimation()
 }
 
 const PlayNavItemsAnimation = () => {
-	let delayTime = 0;
+	let delayTime = 0
 
 	allNavItems.forEach(item => {
 		item.classList.toggle('nav-items-animation')
-		item.style.animationDelay = '.' + delayTime + 's';
-		delayTime++; 
+		item.style.animationDelay = '.' + delayTime + 's'
+		delayTime++
 	})
 }
 

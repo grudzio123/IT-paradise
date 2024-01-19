@@ -6,8 +6,9 @@
 
 .white-block {
   position: absolute;
-  width: 50%;
-  height: 40px;
+  width: 60%;
+  height: 50px;
+  background-color: #fff;
 }
 .white-block-left {
   bottom: 0;
@@ -147,7 +148,7 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
-  font-size: 3.4rem;
+  font-size: 2rem;
 }
 .nav__item:before {
   position: absolute;
@@ -175,7 +176,7 @@ body {
   }
 }
 .nav-items-animation {
-  animation: navItemsAnimation 1s linear both;
+  animation: navItemsAnimation 0.5s linear both;
 }
 
 .header {
@@ -195,23 +196,23 @@ body {
   background-attachment: scroll;
 }
 .header__heading {
-  font-size: 8rem;
+  font-size: 4.4rem;
   font-family: "Roboto Condensed", sans-serif;
-  font-weight: 250;
+  font-weight: 500;
   text-transform: uppercase;
 }
 .header__text {
-  font-size: 2.3rem;
+  font-size: 2rem;
 }
 .header__btn {
-  margin-top: 4.6em;
-  padding: 3.6em 1.4em;
+  margin-top: 3em;
+  padding: 0.8em 2em;
   text-transform: uppercase;
   text-decoration: none;
   border-radius: 10px;
-  border: 3px solid #2bbd0e;
+  border: 2px solid #2bbd0e;
   background: none;
-  font-size: 2rem;
+  font-size: 1.6rem;
   color: #fff;
   cursor: pointer;
 }
@@ -239,36 +240,7 @@ body {
   font-size: 1.4rem;
 }
 
-@media (min-width: 300px) {
-  .nav__item {
-    font-size: 2rem;
-  }
-  .nav .burger-btn__box {
-    width: 30px;
-    height: 20px;
-  }
-  .header__heading {
-    margin-top: 1.2em;
-    font-size: 4rem;
-    letter-spacing: 1px;
-  }
-  .header__text {
-    margin-top: 0.6em;
-    font-size: 2.2rem;
-  }
-  .header__btn {
-    padding: 0.9em 1.4em;
-    font-size: 1.4rem;
-  }
-  .white-block {
-    height: 30px;
-    width: 55%;
-  }
-}
 @media (min-width: 576px) {
-  .nav__item {
-    font-size: 4.2rem;
-  }
   .header__heading {
     margin-top: 1em;
     font-size: 5.2rem;
@@ -280,12 +252,15 @@ body {
   .header__btn {
     font-size: 1.8rem;
   }
-  .white-block {
-    height: 50px;
-    width: 60%;
-  }
 }
 @media (min-width: 768px) {
+  .nav__item {
+    font-size: 2.4rem;
+  }
+  .white-block {
+    height: 50px;
+    width: 45%;
+  }
   .section-heading {
     font-size: 3.6rem;
   }
@@ -294,7 +269,10 @@ body {
   }
 }
 @media (min-width: 992px) {
-  .burger-btn {
+  .nav__item {
+    font-size: 3rem;
+  }
+  .nav .burger-btn {
     top: 50px;
     right: 50px;
   }
@@ -310,10 +288,6 @@ body {
   }
   .header__btn {
     font-size: 2rem;
-  }
-  .white-block {
-    height: 30px;
-    width: 50%;
   }
   .section-heading {
     font-size: 4.8rem;
