@@ -46,21 +46,6 @@
   transform-origin: left;
 }
 
-.section-heading {
-  position: relative;
-  margin-bottom: 2.8em;
-  font-size: 3rem;
-  font-weight: 300;
-  color: #060506;
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 2px;
-}
-
-.section-padding {
-  padding: 6em 2em;
-}
-
 *,
 *::before,
 *::after {
@@ -222,22 +207,6 @@ body {
 }
 .header__btn::before {
   background-color: #2bbd0e;
-}
-
-.aboutus__box {
-  display: flex;
-  flex-direction: column;
-  margin: 2em 0;
-}
-.aboutus__img {
-  width: 100%;
-  margin-bottom: 1em;
-}
-.aboutus__title {
-  margin-bottom: 0.5em;
-}
-.aboutus__text {
-  font-size: 1.4rem;
 }
 
 @media (min-width: 576px) {
