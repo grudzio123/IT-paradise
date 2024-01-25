@@ -165,8 +165,8 @@ body {
 		font-size: 2rem;
 	}
 	&__btn {
-		margin-top: 3em;
-		padding: 0.8em 2em;
+		margin-top: 4em;
+		padding: 0.6em 1.2em;
 		text-transform: uppercase;
 		text-decoration: none;
 		border-radius: 10px;
@@ -187,16 +187,36 @@ body {
 	}
 }
 
-// MAIN 
+// MAIN
 // ABOUTUS SECTION
 
+.aboutus {
+	&__box {
+		display: flex;
+		flex-direction: column;
+		margin: 2em 0;
+	}
 
+	&__img {
+		width: 100%;
+		margin-bottom: 1em;
+		border-radius: 8px;
+	}
+
+	&__title {
+		margin-bottom: 0.6em;
+		font-size: 1.4rem;
+		text-transform: uppercase;
+		color: $secondary-color;
+	}
+	&__text {
+		font-size: 1.4rem;
+	}
+}
 
 // media
 
-
 @media (min-width: 576px) {
-
 	.header {
 		&__heading {
 			margin-top: 1em;
@@ -204,8 +224,76 @@ body {
 		}
 
 		&__text {
-			margin-top: 0.6em;
+			margin-top: 0.2em;
 			font-size: 2.2rem;
+		}
+
+		&__btn {
+			font-size: 1.6rem;
+		}
+	}
+
+	.aboutus {
+		&__box {
+			margin: 5em 0;
+			flex-direction: row;
+			justify-content: space-between;
+			max-height: 400px;
+
+			&-text {
+				width: 55%;
+
+				&--right {
+					text-align: left;
+				}
+			}
+
+			&-img {
+				width: 40%;
+
+				&--right {
+					order: 1;
+				}
+			}
+
+			&__img {
+				margin-bottom: 0;
+				min-height: 200px;
+			}
+		}
+
+		&__title {
+			font-size: 1.4rem;
+		}
+
+		&__text {
+			font-size: 1.4rem;
+		}
+	}
+
+	.section-padding {
+		padding-bottom: 0;
+	}
+}
+
+@media (min-width: 768px) {
+	.nav {
+		&__item {
+			font-size: 2.4rem;
+		}
+
+		.burger-btn {
+			top: 30px;
+			right: 50px;
+		}
+	}
+	.header {
+		&__heading {
+			font-size: 6.6rem;
+		}
+
+		&__text {
+			font-size: 2.6rem;
 		}
 
 		&__btn {
@@ -213,72 +301,68 @@ body {
 		}
 	}
 
-	
-}
-
-@media (min-width: 768px) {
-
-	.nav {
-
-		&__item {
-
-			font-size: 2.4rem;
-		}
-	}
-
 	.white-block {
-
 		height: 50px;
-		width: 45%;
+		width: 50%;
 	}
 	.section-heading {
-		font-size: 3.6rem;
+		font-size: 3.2rem;
 	}
 
-	.section-padding {
-		padding: 8em 2em;
+	.aboutus {
+		&__box {
+			margin: 5em 0;
+		}
+
+		&__title {
+			font-size: 2rem;
+		}
+
+		&__text {
+			font-size: 1.6rem;
+		}
 	}
 }
-
 @media (min-width: 992px) {
-
-	.nav { 
-
+	.nav {
 		&__item {
-
 			font-size: 3rem;
 		}
-	
-	.burger-btn {
-		top: 50px;
-		right: 50px;
 	}
-
-}
-
 	.header {
-		background-image: $dark-blue-gradient, url('../img/header-big.jpg');
-		background-position: 0 80%;
-
 		&__heading {
-			font-size: 8rem;
+			font-size: 8.6rem;
 		}
 
 		&__text {
 			font-size: 3rem;
 		}
+
 		&__btn {
 			font-size: 2rem;
 		}
 	}
-
-
+	.white-block {
+		height: 50px;
+		width: 45%;
+	}
 	.section-heading {
-		font-size: 4.8rem;
+		font-size: 3.8rem;
 	}
 
 	.section-padding {
+		padding: 8em 2em;
+	}
+	.aboutus {
+		&__box {
+			margin: 5em 0;
 
-		padding: 10em 2em;
+			&-text {
+				margin-top: 2.5em;
+			}
+		}
+		&__text {
+			font-size: 1.8rem;
+		}
 	}
 }

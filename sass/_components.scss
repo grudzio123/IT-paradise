@@ -5,13 +5,12 @@
 }
 
 .white-block {
-
-    position: absolute;
-    width: 60%;
-    height: 50px;
+	position: absolute;
+	width: 60%;
+	height: 50px;
 	background-color: $pure-white;
 
-    &-left {
+	&-left {
 		bottom: 0;
 		left: -50px;
 		transform: skew(45deg);
@@ -23,17 +22,15 @@
 		left: -50px;
 		transform: skew(45deg);
 	}
-
 }
 
 .btn-animation {
+	position: relative;
+	transition: background-color 0.3s;
+	overflow: hidden;
+	z-index: 0;
 
-    position: relative;
-    transition: background-color .3s;
-    overflow: hidden;
-    z-index: 0;
-
-    &::before {
+	&::before {
 		display: block;
 		content: '';
 		position: absolute;
@@ -47,25 +44,24 @@
 		z-index: -1;
 	}
 
-		&:hover::before {
-			transform: scaleX(1);
-			transform-origin: left;
-		}
+	&:hover::before {
+		transform: scaleX(1);
+		transform-origin: left;
+	}
 }
 
-// .section-heading {
+//
 
-// 	position: relative;
-// 	margin-bottom: 2.8em;
-// 	font-size: 3rem;
-// 	font-weight: 300;
-// 	color: $main-color;
-// 	text-transform: uppercase;
-// 	text-align: center;
-// 	letter-spacing: 2px;
-// }
+.section-heading {
+	position: relative;
+	margin-bottom: 2em;
+	font-weight: 300;
+	text-align: center;
+	color: $secondary-color;
+	letter-spacing: 2px; 
+	text-transform: uppercase;
+}
 
-// .section-padding {
-
-// padding: 6em 2em; 
-// }
+.section-padding {
+	padding: 6em 2em;
+}
